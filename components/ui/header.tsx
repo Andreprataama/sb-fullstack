@@ -1,9 +1,11 @@
+import Link from 'next/link'
+
 export default function Header() {
   return (
-    <header className="bg-sky-500 dark:bg-gray-800 shadow-md p-5">
-      <div className="max-w-xl px-6">
-        <h1 className="text-lg font-bold">ShareLink</h1>
-      </div>
-    </header>
+    <div className="bg-sky-500 shadow-md p-4 ">
+      <Link href={'/'}>
+        <h1 className="text-white font-bold tracking-widest">Sharelink</h1>
+      </Link>
+    </div>
   )
 }

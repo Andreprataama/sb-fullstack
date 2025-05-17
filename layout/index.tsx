@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { ReactNode } from 'react'
+import Header from '@/components/ui/header'
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
@@ -10,17 +11,9 @@ export default function Layout({ children }: { children: ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header />
 
-      <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100  ">
-        <header className="w-full bg-red-300 shadow-md p-10">
-          <div className="container mx-auto flex justify-between items-center">
-            <h1 className="text-lg font-bold">ShareLink</h1>
-          </div>
-        </header>
-        <main className="p-4 ">
-          <div className="container mx-auto">{children}</div>
-        </main>
-      </div>
+      <main className="container mx-auto p-4">{children}</main>
     </>
   )
 }
